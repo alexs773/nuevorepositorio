@@ -9,7 +9,7 @@ import org.springframework.stereotype.Controller;
 public class AsistenciaController {
 
     @FXML TextField txtNum1, txtNum2;
-    @FXML Label txtResult;
+    @FXML Label txtResult,txtMr;
 
     @FXML
     public void sumar(){
@@ -17,5 +17,13 @@ public class AsistenciaController {
         double num2 =Double.parseDouble(txtNum2.getText());
         double resultado = num1 + num2;
         txtResult.setText(String.valueOf(resultado));
+    }
+
+    @FXML
+    public void multiplicar(){
+        double num1 =Double.parseDouble(txtNum1.getText());
+        double num2 =Double.parseDouble(txtNum2.getText());
+        double resultado = num1*num2;
+        txtMr.setText(String.valueOf(resultado));
     }
 }
